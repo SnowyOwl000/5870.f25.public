@@ -1,0 +1,43 @@
+\gdef\problemNumber{BvG 3.6 (modified)}
+\def\problemText{
+In this exercise, all integers are considered to be nonnegative, for simplicity.
+A \emph{divisor} of an integer $k$ is any integer $d\ne0$ such that $k/d$ has no
+remainder. A \emph{common divisor} for a set of integers is an integer that is a
+divisor for each integer in the set. Euclid's algorithm for finding the greatest
+common divisor (GCD) of two nonnegative integers, $m$ and $n$, can be written as
+follows:
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\Procedure{gcd}{{\bf int }$m$,{\bf int }$n$}
+\If{$n=0$}
+\State $answer\gets m$
+\ElsIf{$m<n$}
+\State $answer\gets\textsc{gcd}(n,m)$
+\Else
+\State $r\gets m-n\cdot\lfloor \frac{m}{n}\rfloor$
+\Comment $r$ is the remainder of $\frac{m}{n}$
+\State $answer\gets\textsc{gcd}(n,r)$
+\EndIf
+\State {\bf return }$answer$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+The preconditions for {\sc gcd}$(m,n)$ are that $m\ge0,n\ge0$ and $m+n>0$.
+Prove the following using induction.
+\begin{list}{\textbf{\alph{enumii}.}}{\usecounter{enumii}}
+	\item If the preconditions of {\sc gcd}$(m,n)$ are satisfied, then the value
+	that the function returns is \emph{some} common divisor of $m$ and $n$.
+	\item If the preconditions of {\sc gcd}$(m,n)$ are satisfied, then the value
+	that the function returns is the \emph{greatest} common divisor of $m$ and $n$.
+\end{list}
+\emph{Hints}\/: If $d$ is a divisor of $k$, how can you rewrite $k$ in
+terms of $d$\/? How do you show that two sets are equal?\\[12pt]
+}
+\def\problemSolution{
+\textcolor{blue}{
+\textbf{Answer:}\\[6pt]
+Answer goes here
+}
+\newpage
+}
+\gdef\problemOutcomes{CS 1, CS 6, 5870-1}

@@ -1,0 +1,36 @@
+\gdef\problemNumber{SW 1.4.6}
+\def\problemText{
+Give the $\Theta(\cdot)$ order of growth (as a function of $N$) of the running
+times of each of the following code fragments:
+\begin{list}{\textbf{\alph{enumii}.}}{\usecounter{enumii}}
+\item\ \\[-12pt]
+\begin{tt}
+int sum=0;\\
+for (int n=N; n > 0; n /= 2)\\
+$\quad$ for (int i=0; i < n; i++)\\
+$\qquad$ sum++;
+\end{tt}
+\item\ \\[-12pt]
+\begin{tt}
+int sum=0;\\
+for (int i=1; i < N; i *= 2)\\
+$\quad$ for (int j=0; j < i; j++)\\
+$\qquad$ sum++;
+\end{tt}
+\item\ \\[-12pt]
+\begin{tt}
+int sum=0;\\
+for (int i=1; i < N; i *= 2)\\
+$\quad$ for (int j=0; j < N; j++)\\
+$\qquad$ sum++;
+\end{tt}
+\end{list}
+}
+\def\problemSolution{
+\textcolor{blue}{
+\textbf{Answer:}\\[6pt]
+Answer goes here
+}
+\newpage
+}
+\gdef\problemOutcomes{CS 1, CS 6, 5870-1}
