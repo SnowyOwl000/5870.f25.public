@@ -1,0 +1,36 @@
+\gdef\problemNumber{CLRS Problem 4-4}
+\def\problemText{
+This problem develops properties of the Fibonacci numbers, which are defined by
+recurrence (3.22). We shall use the technique of generating functions to solve
+the Fibonacci recurrence. Define the \emph{generating function} (or \emph{formal
+power series}) $\mathscr{F}$ as
+\begin{align*}
+\mathscr{F}(z)&=\sum_{i=0}^\infty F_iz^i\\
+&=0+z+z^2+2z^3+3z^4+5z^5+8z^6+13z^7+21z^8+\cdots
+\end{align*}
+where $F_i$ is the $i^{\text{th}}$ Fibonacci number.
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item Show that $\mathscr{F}(z)=z+z\mathscr{F}(z)+z^2\mathscr{F}(z)$.
+    \item Show that
+    \begin{align*}
+        \mathscr{F}(z)&=\frac{z}{1-z-z^2}\\
+        &=\frac{z}{\left(1-\phi z\right)\left(1-\hat\phi z\right)}\\
+        &=\frac{1}{\sqrt{5}}\left(\frac{1}{1-\phi z}-\frac{1}{1-\hat\phi z}\right)\\
+    \end{align*}
+    where $$\phi=\frac{1+\sqrt{5}}{2}\approx1.61803\ldots$$
+    and $$\hat\phi=\frac{1-\sqrt{5}}{2}\approx-0.61803\ldots$$
+    \item Show that $$\mathscr{F}(z)=\sum_{i=0}^\infty\frac{1}{\sqrt{5}}\left(
+    \phi^i-\hat\phi^i\right)z^i$$
+    \item Use part (c) to prove that $F_i=\phi^i/\sqrt{5}$ for $i\ge 0$, rounded
+    to the nearest integer. \emph{Hint\/}: Observe that $\left^^7c\hat\phi\right^^7c
+    <1$.
+\end{list}
+\vskip12pt
+}
+\def\problemSolution{
+\textcolor{blue}{
+\textbf{Answer:}\\
+Answer goes here
+}
+}
+\gdef\problemOutcomes{CS 6, 5870-1}

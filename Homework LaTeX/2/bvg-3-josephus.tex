@@ -1,0 +1,47 @@
+\gdef\problemNumber{The Josephus Problem}
+\def\problemText{
+Suppose we have $n$ items arranged in a circle as shown:\\
+\begin{figure}[H]
+  \caption{Numbered items arranged in a circle}
+\begin{tikzpicture}
+  \draw circle (1cm);
+  \draw (170:1.5) node {$n-1$};
+  \draw (135:1.5) node {$n$};
+  \draw (90:1.5) node {$1$};
+  \draw (45:1.5) node {$2$};
+  \draw (10:1.5) node {$3$};
+  \draw (270:1.5) node {$\cdots$};
+\end{tikzpicture}
+\end{figure}
+\,\\
+We proceed around the circle, removing every other item (item $2$ is the first to be
+removed) until one item remains. For example, if $n=10$, the sequence of removed
+items is\\$2,4,6,8,10,3,7,1,9$, with item $5$ being the last one left. The
+\emph{survivor's number}, $J(n)$, is the number of the last remaining item from a
+set of $n$ items (thus, $J(10)=5$).
+\begin{list}{\textbf{\alph{enumii}.}}{\usecounter{enumii}}
+  \item Suppose there are $2n$ items. After $n$ items have been removed, there
+  are $n$ items remaining. What are the numbers of the items that remain? How do
+  those numbers relate to the numbering used for an initial set of $n$? Use this
+  information to express $J(2n)$ in terms of $J(n)$.
+  \item Suppose there are now $2n+1$ items. After $n+1$ items have been removed, there
+  are $n$ items remaining. What are the numbers of the items that remain? How do
+  those numbers relate to the numbering used for an initial set of $n$? Use this
+  information to express $J(2n+1)$ in terms of $J(n)$.
+  \item Combine parts {\bf a} and {\bf b}, along with the base case $J(1)=1$, to
+  form a recurrence relation for $J(n)$.
+  \item Use the recurrence relation to create a small table of $J(n)$ values (you
+  shouldn't need more than 20 to see the pattern). Use this table to find a closed
+  form (\emph{i.e.}, non-recursive) for $J(n)$.
+  \emph{Hint}: Express $n$ as $n=2^m+l$, where $2^m\le n<2^{m+1}$.
+  \item Prove that your closed form solution is correct. \emph{Hint}: Use induction
+  on $m$.
+\end{list}
+}
+\def\problemSolution {
+\textcolor{blue}{
+\textbf{Answer:}\\[6pt]
+Answer goes here
+}
+}
+\gdef\problemOutcomes{CS 6, 5870-1, 5870-2}
