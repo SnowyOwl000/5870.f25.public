@@ -1,0 +1,72 @@
+\gdef\problemNumber{Not in a book}
+\def\problemText{
+Given the following graph, find and show the strongly-connected components.
+Show the stack created after the first DFS. Assume that all vertex lists are
+processed in alphabetical order.\\[12pt]
+\begin{tikzpicture}
+  \node[circle,draw] (va) at (0,6) {A};
+  \node[circle,draw] (vb) at (5,6) {B};
+  \node[circle,draw] (vc) at (10,6) {C};
+  \node[circle,draw] (vd) at (2.5,4) {D};
+  \node[circle,draw] (ve) at (7.5,4) {E};
+  \node[circle,draw] (vf) at (12.5,4) {F};
+  \node[circle,draw] (vg) at (0,2) {G};
+  \node[circle,draw] (vh) at (5,2) {H};
+  \node[circle,draw] (vi) at (10,2) {I};
+  \node[circle,draw] (vj) at (2.5,0) {J};
+  \node[circle,draw] (vk) at (7.5,0) {K};
+  \node[circle,draw] (vl) at (12.5,0) {L};
+
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (va) -- (vd);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (va) -- (vg);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vb) -- (va);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vb) -- (vc);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vc) -- (vf);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vd) -- (vb);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vd) -- (vh);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ve) -- (vc);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ve) to[bend left=10] (vf);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ve) -- (vi);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vf) to[bend left=10] (ve);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vh) -- (vi);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vh) -- (vj);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vh) -- (vk);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vi) -- (vf);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vi) -- (vl);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vj) -- (vd);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vj) -- (vg);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vj) -- (vk);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vk) to[bend left=10] (vl);
+\draw [decoration={markings,mark=at position 1 with
+{\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (vl) to[bend left=10] (vk);
+
+\end{tikzpicture}
+\vskip12pt
+}
+\def\problemSolution{
+\textcolor{blue}{
+\textbf{Answer:}\\
+Answer goes here
+}
+}
+\gdef\problemOutcomes{CS 2, CS 6, 5870-2}
