@@ -7,6 +7,18 @@ graph shown in Figure~$13.2$.\\[12pt]
 \textcolor{blue}{
 \textbf{Answer:}\\[6pt]
 Answer goes here
+Note: Here is the original graph, without the edge labels for clarity.
+\begin{tikzpicture}
+    \node[circle,draw] (lax) at (0,0) {LAX};
+    \node[circle,draw] (dfw) at (2,2) {DFW};
+    \node[circle,draw] (ord) at (2,4) {ORD};
+    \node[circle,draw] (sfo) at (0,6) {SFO};
+    \node[circle,draw] (jfk) at (4,6) {JFK};
+    \node[circle,draw] (mia) at (4,0) {MIA};
+    \node[circle,draw] (bos) at (6,3) {BOS};
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (jfk) -- (sfo);
+  \end{tikzpicture}
 }
 }
 \gdef\problemOutcomes{CS 2, CS 6, 5870-2}
