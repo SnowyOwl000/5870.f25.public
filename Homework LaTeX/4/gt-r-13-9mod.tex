@@ -18,7 +18,27 @@ Note: Here is the original graph, without the edge labels for clarity.
     \node[circle,draw] (bos) at (6,3) {BOS};
   \draw [decoration={markings,mark=at position 1 with
   {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (jfk) -- (sfo);
-  \end{tikzpicture}
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (jfk) -- (dfw);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (jfk) -- (mia);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (bos) -- (jfk);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (bos) -- (mia);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (mia) -- (dfw);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (mia) -- (lax);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ord) -- (dfw);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (dfw) -- (lax);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (dfw) -- (ord);
+  \draw [decoration={markings,mark=at position 1 with
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (lax) -- (ord);
+\end{tikzpicture}
 }
 }
 \gdef\problemOutcomes{CS 2, CS 6, 5870-2}
