@@ -6,16 +6,16 @@ graph shown in Figure~$13.2$.\\[12pt]
 \def\problemSolution{
 \textcolor{blue}{
 \textbf{Answer:}\\[6pt]
-Answer goes here
-Note: Here is the original graph, without the edge labels for clarity.
+Answer goes here\\
+Note: Here is the original graph, without the edge labels for clarity.\\
 \begin{tikzpicture}
     \node[circle,draw] (lax) at (0,0) {LAX};
-    \node[circle,draw] (dfw) at (2,2) {DFW};
-    \node[circle,draw] (ord) at (2,4) {ORD};
+    \node[circle,draw] (dfw) at (6,2) {DFW};
+    \node[circle,draw] (ord) at (4,4) {ORD};
     \node[circle,draw] (sfo) at (0,6) {SFO};
-    \node[circle,draw] (jfk) at (4,6) {JFK};
-    \node[circle,draw] (mia) at (4,0) {MIA};
-    \node[circle,draw] (bos) at (6,3) {BOS};
+    \node[circle,draw] (jfk) at (8,6) {JFK};
+    \node[circle,draw] (mia) at (8,0) {MIA};
+    \node[circle,draw] (bos) at (12,3) {BOS};
   \draw [decoration={markings,mark=at position 1 with
   {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (jfk) -- (sfo);
   \draw [decoration={markings,mark=at position 1 with
@@ -31,11 +31,11 @@ Note: Here is the original graph, without the edge labels for clarity.
   \draw [decoration={markings,mark=at position 1 with
   {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (mia) -- (lax);
   \draw [decoration={markings,mark=at position 1 with
-  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ord) -- (dfw);
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (ord) to [bend left] (dfw);
   \draw [decoration={markings,mark=at position 1 with
   {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (dfw) -- (lax);
   \draw [decoration={markings,mark=at position 1 with
-  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (dfw) -- (ord);
+  {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (dfw) to [bend left] (ord);
   \draw [decoration={markings,mark=at position 1 with
   {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}] (lax) -- (ord);
 \end{tikzpicture}
